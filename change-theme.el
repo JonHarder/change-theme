@@ -3,6 +3,7 @@
 ;; Author: Jon Harder <jonharder6@gmail.com>
 ;; Version: 1.0
 ;; Keywords: Theme
+;; Package-Requires: ((emacs "24"))
 
 ;;; Commentary:
 
