@@ -14,7 +14,7 @@
 
 ;;; Code:
 
-(defun theme-available-p (theme)
+(defun change-theme-theme-available-p (theme)
   (interactive)
   (if (memq theme (custom-available-themes))
       t
@@ -37,7 +37,7 @@ Themes are added in the form (puthash theme-name (lambda () ,@init-code))")
   "creates a theme (really just a symbol for the name which is used by `load-theme' in
 `change-theme-set-theme', and a lambda for the initialization code when that theme
 is selected.  It also adds that theme to `change-theme-themes'."
-  `(if (theme-available-p ,name)
+  `(if (change-theme-theme-available-p ,name)
        (progn (puthash ,name (lambda () ,@init-code) change-theme-themes)
 	      (message (concat "Added theme " (symbol-name ,name))))
      (message (concat "Theme '" (symbol-name ,name) "' not available for load-theme"))))
