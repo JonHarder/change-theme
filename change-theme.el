@@ -55,7 +55,7 @@ ido to select from the list of the themes added so far via `change-theme-make-th
   (if (memq (symbol-name theme) (change-theme-available-themes))
       (progn (dolist (tt custom-enabled-themes)
 	       (disable-theme tt))
-	     (load-theme theme)
+	     (load-theme theme t)
 	     (funcall (gethash theme change-theme-themes)))
     (message (concat "Theme '" (symbol-name theme) "' not a recognized theme"))))
 
