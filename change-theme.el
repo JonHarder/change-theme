@@ -61,4 +61,4 @@ ido to select from the list of the themes added so far via `change-theme-make-th
 
 
 (provide 'change-theme)
-;;; change-theme ends here
+;;; change-theme.el ends here
